@@ -60,9 +60,11 @@ We also deployed server trained model to custom vertex AI endpoint for Latency L
 
 **Steps to trigger Federated BiLSTM training:**
 1. Launch High Memory VM on GCP
-2. SSH into that VM instance and create virtual environment with `next_word_prediction/federated/requirements.txt`: 
+2. Download Trained LSTM model from this GDrive Link: `https://drive.google.com/file/d/14_I8zav51oatXySC0QNT8MIEV73dFBsV/`
+3. SSH into that VM instance and create virtual environment with `next_word_prediction/federated/requirements.txt`: 
    1. `git clone <repo>`
    2. `cd <repo>/next_word_prediction/federated`
+   3. `mv ~/LSTM_model_top3.pth ~/6998/next_word_prediction/federated/data/` 
    3. `pip install virtualenv`
    4. `virtualenv venv`
    5. `source venv/bin/activate`
