@@ -1,0 +1,5 @@
+GCS_PATH = "https://storage.cloud.google.com/practical-dl/LSTM_model_top3.pth"
+PROJECT = "practical-dl"
+BUCKET = "practical-dl"
+MODEL_PATH = "LSTM_model_top3.pth"
+DESTINATION_PATH = "LSTM_model_top3.pth"
