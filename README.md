@@ -106,7 +106,7 @@ docker push ${IMAGE_URI}`
 
  3. Federated Training: <br>
    
-   ![Alt text](https://github.com/ktjkim/6998/blob/main/next_word_prediction/top_3_federated.png)
+   ![Alt text](https://raw.githubusercontent.com/ktjkim/6998/main/next_word_prediction/top_3_federated.png)
 
 
 
