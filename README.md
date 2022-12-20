@@ -10,13 +10,22 @@ Repository for Practical Deep Learning System Performance Fall 2022 Project: A C
 
 2.  Katie Jooyoung Kim, Columbia University, New York, NY 10027 (Email: jk4534@columbia.edu)
 
-
-**Background:**  
-
+### Project Description
+In our final project for the course Practical Deep Learning Systems Performance, we build upon our mid-term seminar presentation on the topic of federated learning. To this end, we delve further into the following topics. 
 We conduct a comparative study of the performance of federated learning vs. traditional deep learning.
 Federated learning is a technique that allows multiple participating agents (“clients”) to learn an aggregate model that is coordinated by a central server without sending their sensitive data to the latter. 
 Federated optimization differs from distributed optimization in that it takes the distributed nature of the operations one step further by keeping the data itself distributed as well.
 Our goal is to demonstrate how federated learning is a powerful way to realize decentralized training tasks through using it in a practical setting and conducting a comparative study. 
+
+**Related Topics**
+1. Federated Learning with Only Positive Labels [Paper Here](https://arxiv.org/abs/2004.10342)
+Federated learning with only positive labels refers to a specific yet realistic setting in which each client participating in the federated training process only has access to local data from a specific class. This is an issue because the overall problem is still that of a multi-class classification scheme. 
+2. Federated Learning for Mobile Keyboard Prediction [Paper Here](https://arxiv.org/abs/1811.03604) 
+Federated learning for next word prediction
+
+### Results and Observations
+In both of the experiments, we observe that federated learning is very slow in speed and in convergence compared to similar tasks that we have encountered in the course. This is true for both the frameworks that we have used (PySyft and PyTorch / TensorFlow Federated and TensorFlow). In the MNIST image classification task, 
+
 
 **Approach:**
 We conduct 2 experiments:
@@ -41,6 +50,9 @@ We also deployed server trained model to custom vertex AI endpoint for Latency L
    2. `next_word_prediction/federated/utils`: utils files for constants and model architecture
    3. `next_word_prediction/federated/main.py`: main file to trigger federated training
 3. `practical-dl-prediction-endpoint`: Dockerfile and required code to preprocess incoming inference request and generate inference results
+4. `generate_most_frequent_labels.ipynb` and `most_frequent_labels.json`: results obtained from generate_most_frequent_labels.ipynb 
+5. `FederatedAveraging.ipynb`: MNIST classification task using the FederatedAveraging algorithm proposed by the [original paper that introduced federated learning](https://arxiv.org/abs/1602.05629)
+6. `FederatedAveragingwithSpreadout.ipynb`: MNIST classification task using the FederatedAveragingwithSpreadout algorithm designed to address the issues inherent to classification in an "only positive labels" setting
 
 **Steps to trigger server-based BiLSTM training:** 
 1. Setup GCP VM with V100 GPU and PyTorch 1.4.0 with Jupyter Notebook access
@@ -75,7 +87,7 @@ docker push ${IMAGE_URI}`
 
 
 ## Results: 
-1. Only Positive Class
+1. Only Positive Class: Results are shown in `FederatedAveraging.ipynb` and `FederatedAveragingwithSpreadout.ipynb` notebooks.
 
 2. Next Word Prediction
    1. Server Based Training
