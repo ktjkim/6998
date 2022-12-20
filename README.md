@@ -91,10 +91,21 @@ docker push ${IMAGE_URI}`
 ## Results: 
 1. Only Positive Class: Results are shown in `FederatedAveraging.ipynb` and `FederatedAveragingwithSpreadout.ipynb` notebooks.
 
-2. Next Word Prediction
-   1. Server Based Training
-![Alt text](/6998/next_word_prediction/top1_server.png?raw=true "Title")
-   2. Federated Training:
+2. Next Word Prediction Server Based Training
+   1. Top@1 words for next word prediction Training and Validation accuracy: <br>
+![Alt text](https://github.com/ktjkim/6998/blob/main/next_word_prediction/top1_server.png)
+<br>
+
+2. Top@3 words for next word prediction Training and Validation accuracy: <br>
+![Alt text](https://github.com/ktjkim/6998/blob/main/next_word_prediction/top3_server.png)
+<br>
+
+3. Top@1 and Top@3 words for next word prediction Validation accuracy comparision <br>
+![Alt text](https://github.com/ktjkim/6998/blob/main/next_word_prediction/top1_top3.png)
+<br>
+
+ 3. Federated Training:
+   
 
 
 
