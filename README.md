@@ -111,6 +111,9 @@ docker push ${IMAGE_URI}`
 
 
 
+RESOURCES:
+1.  For LSTM Model: https://github.com/joseilberto/top3next
+2. Vertex AI Model Deployment: https://blog.searce.com/deploy-your-own-custom-ml-on-vertex-ai-using-gcp-console-e3c52f7da2b
 
 
 
