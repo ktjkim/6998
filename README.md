@@ -104,12 +104,16 @@ docker push ${IMAGE_URI}`
 ![Alt text](https://github.com/ktjkim/6998/blob/main/next_word_prediction/top1_top3.png)
 <br>
 
- 3. Federated Training:
+ 3. Federated Training: <br>
    
+   ![Alt text](https://raw.githubusercontent.com/ktjkim/6998/main/next_word_prediction/top_3_federated.png)
 
 
 
 
+RESOURCES:
+1.  For LSTM Model: https://github.com/joseilberto/top3next
+2. Vertex AI Model Deployment: https://blog.searce.com/deploy-your-own-custom-ml-on-vertex-ai-using-gcp-console-e3c52f7da2b
 
 
 
